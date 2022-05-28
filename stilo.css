@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;0,900;1,600&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+
+:root{
+	--textos: rgb(0, 106, 255);
+	--texto-btn: #0ba360;
+	--font: 'Raleway', sans-serif;
+	--espacio-letras: 1rem;
+
+}
+
+
+body{
+	background-color: #f4f4f4;
+	height: 100vh;
+	max-width: 100%;
+	color: #f4f4f4;
+	font-family: var(--font);
+
+}
+
+/* estilo generales  */
+.container{
+	width: 100%;
+	min-height: 100vh;
+}
+
+
+/* primer seccion  */
+.section-1{
+	filter: grayscale(50%);
+	background: linear-gradient(to right, #000000c6, #0002 ,#ffffff10),url('assets/photographer.jpg') no-repeat center/cover;
+	background-attachment: fixed;
+
+
+}
+.content{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+	gap: 2rem;
+	/* border: 3px solid blue; */
+
+}
+
+.hero-container{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: start;
+	gap: 5rem;
+	padding: 0px 2rem;
+	align-items: center;
+	/* background-color: green; */
+	position: relative;
+}
+.section-1 p{
+	width: 500px;
+	line-height: 1.5rem;
+}
+.section-1 h2{
+	font-size:  3rem;
+	font-weight: 800;
+	letter-spacing: var(--espacio-letras);
+}
+
+
+a>img{
+	width: 50px;
+}
+
+.boton{
+	color: var(--texto-btn);
+	border: 4px solid var(--texto-btn);
+	display: block;
+	padding: .5rem 1rem;
+	border-radius: 2px;
+}
+.redes{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 10%;
+	gap: 2rem;
+	height: 90%;
+	border-radius: 10px;
+	overflow: hidden;
+}
+ /* SPAN LINEAS  */
+.line{
+	width: 5px;
+	height: 150px;
+	background-color: rgb(212, 212, 212);
+}
+
+
+
+
+
+/* SEGUNDA SECCION  CARDS*/
+
+.section-work{
+	overflow: hidden;
+}
+	
+
+.container-cards{
+	min-height: 100vh;
+	width: 100%;
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: rgb(15, 15, 15);
+	padding: 2rem 0px 0px 0px;
+
+}
+.card-work{
+	width: 45%;
+	height: 450px;
+	border: 5px solid crimson;
+	text-align: center;
+	display: flex;
+	flex-flow: nowrap column;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 2rem;
+}
+
+.card-work h2{
+	font-size: 1.8rem;
+}
+
+
+/* GALERIA  */
+.galery{
+	background-color: rgb(15, 15, 15);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 1rem 2rem 0px 2rem;
+	margin: auto;
+}
+
+.overlay{
+	display: none;
+}
+.imagen{
+	width: 32%;
+	margin-bottom: 1rem;
+}
+
+.imagen img{
+	width: 100%;
+}
+
+
+
+
+/* probando  */
+
+@media (max-width: 600px) {
+	.redes{
+		flex-direction: row;
+		width: 100%;
+		border: none;
+		box-shadow: none;
+		justify-content: space-evenly;
+	}
+
+	.hero-container{
+		width: 100%;
+		flex-direction: column;
+		padding: 2rem 0 4rem 0;
+		gap: 2px;
+	}
+	.content{
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+	
+	.line{
+		transform: rotate(90deg);
+		height: 100px;
+	}
+
+	/* CARDS  */
+
+	.section-work{
+		overflow: hidden;
+	}
+		
+	
+	.container-cards{
+		min-height: 100vh;
+		width: 100%;
+		flex-wrap: wrap;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		background-color: rgb(15, 15, 15);
+	}
+	.card-work{
+		width: 42%;
+		height: 300px;
+		border: 5px solid crimson;
+		text-align: center;
+		display: flex;
+		flex-flow: nowrap column;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.card-work h2{
+		font-size: 1.8rem;
+	}
+
+	/* GALERIA FOTOS  */
+	.galery{
+		background-color: rgb(14, 14, 14);
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 1rem 0px 0px 0px;
+	}
+	.overlay{
+		display: none;
+	}
+	.imagen{
+		width: 90%;
+		margin-bottom: 1rem;
+	}
+
+	.imagen img{
+		width: 100%;
+	}
+	
+		
+		
+
+}
